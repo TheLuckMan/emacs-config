@@ -179,22 +179,6 @@ Supports decimal, hex (0x...), and binary (0b...)."
     (dired default-directory))
   (select-window (get-buffer-window "*dired*")))
 
-;; (defun my-diredfl-no-background ()
-;;   (dolist (face '(diredfl-read-priv
-;;                   diredfl-write-priv
-;;                   diredfl-exec-priv
-;;                   diredfl-no-priv))
-;;     (set-face-attribute face nil
-;;                         :background nil
-;;                         :inherit nil)))
-
-;; (with-eval-after-load 'diredfl
-;;   (add-hook 'dired-mode-hook #'my-diredfl-no-background))
-
-;(add-hook 'emacs-startup-hook #'my-startup-dired)
-
-
-
 ;;; Killing *scratch* file when started Emacs --------------------------------
 (setq inhibit-startup-screen t
       initial-scratch-message nil)
