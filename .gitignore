@@ -1,0 +1,37 @@
+# Packages
+elpa/
+straight/
+quelpa/
+
+# Native compilation
+eln-cache/
+
+# Autosaves / backups
+auto-save-list/
+*~
+#*
+.#*
+
+# Sessions / cache
+transient/
+url/
+.cache/
+.lsp-session-v1
+tramp
+history
+
+# Forge / Magit
+forge-database.sqlite
+
+# Projectile
+projectile-bookmarks.eld*
+  
+# Byte compiled files
+*.elc
+
+# Desktop sessions
+.desktop
+.desktop.lock
+
+# Tutorial content
+tutorial/
