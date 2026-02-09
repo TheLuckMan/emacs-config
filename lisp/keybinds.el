@@ -23,6 +23,7 @@
 ;; Dired-mode
 
 (define-key dired-mode-map (kbd "f") #'avy-goto-char)
+(define-key dired-mode-map (kbd "C-c o") #'dired-omit-mode)
 
 
 ;; добавить курсоры по совпадениям

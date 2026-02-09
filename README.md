@@ -2,6 +2,8 @@
 
 This is my Emacs configuration files made for my workflow.
 
+![Emacs Prieview Demostration](screenshots/demo.png)
+
 #### Features
 
 - GNOME Adwaita dark theme
