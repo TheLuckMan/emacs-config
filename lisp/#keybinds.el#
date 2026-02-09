@@ -44,7 +44,11 @@
 (global-unset-key (kbd "C-\\"))
 (global-set-key (kbd "C-\\") #'replace-regexp)
 
-(global-set-key (kbd "<0x100811d0>") 'toggle-input-method)
+(define-prefix-command 'my/fn-map)
+
+(global-set-key (kbd "<0x100811d0>") 'my/fn-map)
+
+
 
 ;; Cargo
 (global-set-key (kbd "C-c r") #'my-cargo-run)

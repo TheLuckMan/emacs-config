@@ -36,6 +36,8 @@
 	exec-path-from-shell
 	magit
 	forge
+	avy
+	dired-filter
         ))
 
 (require 'use-package)

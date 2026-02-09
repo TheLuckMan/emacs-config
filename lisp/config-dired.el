@@ -1,6 +1,7 @@
 ;;; Dired --------------------------------------------------------------------
 ;; человеко-читаемые размеры
-(setq dired-listing-switches "-Alh")
+(require 'dired-x)
+(setq dired-listing-switches "-Alh --group-directories-first")
 
 ;; подсветка
 (add-hook 'dired-mode-hook 'diredfl-mode)
@@ -27,11 +28,11 @@
                         :background nil))
   )
 
-(defun my-startup-dired ()
-  "Open dired only if Emacs was started without file arguments."
-  (when (and (= (length command-line-args) 1) ; только 'emacs'
-             (not (daemonp)))
-    (dired default-directory))
-  (select-window (get-buffer-window "*dired*")))
+
+(setq dired-omit-files
+      (concat dired-omit-files "\\|^#\\|~$\\|\\.bak$"))
+
+(add-hook 'dired-mode-hook #'dired-omit-mode)
+
 
 (provide 'config-dired)

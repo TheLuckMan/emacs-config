@@ -35,4 +35,15 @@ Supports decimal, hex (0x...), and binary (0b...)."
   (interactive)
   (my--change-number-at-point -1))
 
+(add-hook 'vterm-mode-hook
+          (lambda ()
+            (column-number-mode -1)))
+
+(defun my-vterm-ui ()
+  (column-number-mode -1)
+  (line-number-mode -1)
+  (display-line-numbers-mode -1))
+
+(add-hook 'vterm-mode-hook #'my-vterm-ui)
+
 (provide 'functions)

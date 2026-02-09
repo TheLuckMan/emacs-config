@@ -1,4 +1,7 @@
 ;;; exec-path-from-shell -----------------------------------------------------
+(require 'vterm)
+(require 'project)
+(require 'exec-path-from-shell)
 
 (exec-path-from-shell-initialize)
 
@@ -22,10 +25,6 @@
                     (project-root proj)))
              default-directory)))
     (my/vterm-new)))
-
-(add-hook 'vterm-mode-hook
-          (lambda ()
-            (add-hook 'kill-buffer-hook #'vterm-send-C-d nil t)))
 
 ;;; vterm cargo-run ----------------------------------------------------------
 
